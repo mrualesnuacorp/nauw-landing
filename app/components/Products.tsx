@@ -59,8 +59,8 @@ function CategorySlider({ cat }: { cat: typeof categories[number] }) {
     <div className="flex flex-col">
       {/* Category label */}
       <div className="mb-4">
-        <h3 className="text-xl font-bold text-[#1A1A1A]">{cat.name}</h3>
-        <p className="text-sm text-[#6B6361]">{cat.desc}</p>
+        <h3 className="text-xl font-bold text-white">{cat.name}</h3>
+        <p className="text-sm text-white/60">{cat.desc}</p>
       </div>
 
       {/* Card */}
@@ -115,7 +115,7 @@ function CategorySlider({ cat }: { cat: typeof categories[number] }) {
 
         {/* Info below image */}
         <div className="px-6 py-5">
-          <h4 className="text-lg font-bold text-[#1A1A1A] mb-4">{product.name}</h4>
+          <h4 className="text-lg font-bold text-[#1A1A1A] mb-4 mix-blend-multiply">{product.name}</h4>
 
           <div className="flex gap-2 mb-5">
             {product.specs.map((s) => (
@@ -124,8 +124,8 @@ function CategorySlider({ cat }: { cat: typeof categories[number] }) {
                 className="rounded-xl px-4 py-2 text-center flex-1"
                 style={{ backgroundColor: product.specsBg }}
               >
-                <p className="text-base font-bold text-[#1A1A1A]">{s.value}</p>
-                <p className="text-[10px] text-[#6B6361] uppercase tracking-wider">{s.label}</p>
+                <p className="text-base font-bold text-[#1A1A1A] mix-blend-multiply">{s.value}</p>
+                <p className="text-[10px] text-[#6B6361] uppercase tracking-wider mix-blend-multiply">{s.label}</p>
               </div>
             ))}
           </div>
@@ -137,7 +137,7 @@ function CategorySlider({ cat }: { cat: typeof categories[number] }) {
                 <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </LiquidButton>
-            <span className="text-xl font-bold text-[#1A1A1A]">{product.price}</span>
+            <span className="text-xl font-bold text-[#1A1A1A] mix-blend-multiply">{product.price}</span>
           </div>
         </div>
       </div>
@@ -147,22 +147,22 @@ function CategorySlider({ cat }: { cat: typeof categories[number] }) {
 
 export default function Products() {
   return (
-    <section id="productos" className="py-24 bg-white">
+    <section id="productos" className="py-24 bg-[#0f2a1a]">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-16">
           <div>
-            <p className="text-xs font-medium text-[#936037] uppercase tracking-widest mb-3">
+            <p className="text-xs font-medium text-[#b07a45] uppercase tracking-widest mb-3">
               Nuestros productos
             </p>
-            <h2 className="text-4xl sm:text-5xl font-bold text-[#1A1A1A] leading-tight">
+            <h2 className="text-4xl sm:text-5xl font-bold text-white leading-tight">
               Toda la línea
               <br />
               nauw.
             </h2>
           </div>
-          <p className="text-[#6B6361] max-w-xs leading-relaxed">
+          <p className="text-white/60 max-w-xs leading-relaxed">
             Suplementación de alto rendimiento con ingredientes de origen ecuatoriano.
           </p>
         </div>

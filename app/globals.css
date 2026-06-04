@@ -33,6 +33,7 @@
   --ink: #1A1A1A;
   --muted: #6B6361;
   --white: #ffffff;
+  --dark-green: #0f2a1a;
 }
 
 * {
@@ -45,8 +46,8 @@ html {
 
 body {
   font-family: "GeneralSans", sans-serif;
-  background: var(--white);
-  color: var(--ink);
+  background: var(--dark-green);
+  color: var(--white);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

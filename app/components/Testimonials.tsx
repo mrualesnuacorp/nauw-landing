@@ -21,14 +21,14 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-[#0f2a1a]">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center max-w-xl mx-auto mb-16">
-          <p className="text-xs font-medium text-[#936037] uppercase tracking-widest mb-3">
+          <p className="text-xs font-medium text-[#b07a45] uppercase tracking-widest mb-3">
             Testimonios
           </p>
-          <h2 className="text-4xl sm:text-5xl font-bold text-[#1A1A1A] leading-tight">
+          <h2 className="text-4xl sm:text-5xl font-bold text-white leading-tight">
             Lo dicen quienes
             <br />
             ya lo viven.
@@ -40,7 +40,7 @@ export default function Testimonials() {
           {testimonials.map((t, i) => (
             <div
               key={i}
-              className="bg-[#F5F0EB] rounded-3xl p-7 flex flex-col"
+              className="bg-white/10 rounded-3xl p-7 flex flex-col"
             >
               {/* Stars */}
               <div className="flex gap-1 mb-5">
@@ -51,7 +51,7 @@ export default function Testimonials() {
                 ))}
               </div>
 
-              <p className="text-[#1A1A1A] leading-relaxed flex-1 mb-6">"{t.body}"</p>
+              <p className="text-white leading-relaxed flex-1 mb-6">"{t.body}"</p>
 
               {/* Author */}
               <div className="flex items-center gap-3">
@@ -59,8 +59,8 @@ export default function Testimonials() {
                   {t.initials}
                 </div>
                 <div>
-                  <p className="text-sm font-bold text-[#1A1A1A]">{t.name}</p>
-                  <p className="text-xs text-[#6B6361]">{t.role}</p>
+                  <p className="text-sm font-bold text-white">{t.name}</p>
+                  <p className="text-xs text-white/60">{t.role}</p>
                 </div>
               </div>
             </div>
