@@ -1,3 +1,5 @@
+import { ScrollReveal } from "./ui/ScrollReveal";
+
 const testimonials = [
   {
     name: "Camila V.",
@@ -24,22 +26,24 @@ export default function Testimonials() {
     <section className="py-24 bg-[#0f2a1a]">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
-        <div className="text-center max-w-xl mx-auto mb-16">
-          <p className="text-xs font-medium text-[#b07a45] uppercase tracking-widest mb-3">
-            Testimonios
-          </p>
-          <h2 className="text-4xl sm:text-5xl font-bold text-white leading-tight">
-            Lo dicen quienes
-            <br />
-            ya lo viven.
-          </h2>
-        </div>
+        <ScrollReveal direction="emerge" threshold={0.2}>
+          <div className="text-center max-w-xl mx-auto mb-16">
+            <p className="text-xs font-medium text-[#b07a45] uppercase tracking-widest mb-3">
+              Testimonios
+            </p>
+            <h2 className="text-4xl sm:text-5xl font-bold text-white leading-tight">
+              Lo dicen quienes
+              <br />
+              ya lo viven.
+            </h2>
+          </div>
+        </ScrollReveal>
 
         {/* Cards */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((t, i) => (
+            <ScrollReveal key={i} direction="up" delay={i * 160}>
             <div
-              key={i}
               className="bg-white/10 rounded-3xl p-7 flex flex-col"
             >
               {/* Stars */}
@@ -64,6 +68,7 @@ export default function Testimonials() {
                 </div>
               </div>
             </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

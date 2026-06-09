@@ -15,7 +15,7 @@ export default function Footer() {
               className="h-6 w-auto mb-4"
             />
             <p className="text-sm text-white/60 leading-relaxed max-w-xs">
-              Suplementación deportiva premium hecha con el mejor chocho
+              Nutrición funcional deportiva premium hecha con el mejor chocho
               ecuatoriano.
             </p>
           </div>

@@ -11,8 +11,8 @@ const cormorant = Cormorant_Garamond({
 export const metadata: Metadata = {
   title: "nauw. — Proteína de Chocho con Antioxidantes",
   description:
-    "Suplementación deportiva premium hecha con chocho ecuatoriano. 27g de proteína por porción.",
-  keywords: "proteína, chocho, suplementos, wellness, Ecuador, nauw",
+    "Nutrición funcional deportiva premium hecha con chocho ecuatoriano. 27g de proteína por porción.",
+  keywords: "proteína, chocho, nutrición funcional, wellness, Ecuador, nauw",
 };
 
 export default function RootLayout({

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { LiquidButton } from "./ui/LiquidButton";
+import { ScrollReveal } from "./ui/ScrollReveal";
 
 type Product = {
   name: string;
@@ -151,26 +152,30 @@ export default function Products() {
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-16">
-          <div>
-            <p className="text-xs font-medium text-[#b07a45] uppercase tracking-widest mb-3">
-              Nuestros productos
+        <ScrollReveal direction="up">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-16">
+            <div>
+              <p className="text-xs font-medium text-[#b07a45] uppercase tracking-widest mb-3">
+                Nuestros productos
+              </p>
+              <h2 className="text-4xl sm:text-5xl font-bold text-white leading-tight">
+                Toda la línea
+                <br />
+                nauw.
+              </h2>
+            </div>
+            <p className="text-white/60 max-w-xs leading-relaxed">
+              Nutrición funcional de alto rendimiento con ingredientes de origen ecuatoriano.
             </p>
-            <h2 className="text-4xl sm:text-5xl font-bold text-white leading-tight">
-              Toda la línea
-              <br />
-              nauw.
-            </h2>
           </div>
-          <p className="text-white/60 max-w-xs leading-relaxed">
-            Suplementación de alto rendimiento con ingredientes de origen ecuatoriano.
-          </p>
-        </div>
+        </ScrollReveal>
 
         {/* Grid of category sliders */}
         <div className="grid sm:grid-cols-2 gap-8">
-          {categories.map((cat) => (
-            <CategorySlider key={cat.name} cat={cat} />
+          {categories.map((cat, i) => (
+            <ScrollReveal key={cat.name} direction="up" delay={i * 130}>
+              <CategorySlider cat={cat} />
+            </ScrollReveal>
           ))}
         </div>
 

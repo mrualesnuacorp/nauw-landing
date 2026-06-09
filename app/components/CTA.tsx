@@ -31,7 +31,7 @@ export default function CTA() {
               </h2>
               <p className="text-white leading-relaxed mb-8 max-w-md">
                 Únete a la comunidad nauw y transforma tu bienestar con
-                suplementación premium de origen ecuatoriano.
+                nutrición funcional premium de origen ecuatoriano.
               </p>
               <div className="flex flex-wrap gap-4">
                 <LiquidButton href="#productos" size="xl" variant="dark">
