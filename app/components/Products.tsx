@@ -19,9 +19,7 @@ const categories: { name: string; desc: string; products: Product[] }[] = [
     name: "Proteína",
     desc: "De chocho con antioxidantes",
     products: [
-      { name: "Chocolate y Uvilla", image: "/images/prod-proteina-chocolate.jpg", cardBg: "rgba(232,208,184,0.5)", specsBg: "rgba(232,208,184,0.9)", specs: [{ label: "Proteína", value: "27g" }, { label: "Peso", value: "600g" }], price: "$49.90" },
-      { name: "Fresa y Banano",     image: "/images/prod-proteina-fresa.jpg",     cardBg: "rgba(245,213,213,0.5)", specsBg: "rgba(245,213,213,0.9)", specs: [{ label: "Proteína", value: "27g" }, { label: "Peso", value: "600g" }], price: "$49.90" },
-      { name: "Vainilla y Coco",    image: "/images/prod-proteina-vainilla.jpg",  cardBg: "rgba(213,235,245,0.5)", specsBg: "rgba(213,235,245,0.9)", specs: [{ label: "Proteína", value: "27g" }, { label: "Peso", value: "600g" }], price: "$49.90" },
+      { name: "Chocolate y Uvilla", image: "/images/prod-proteina-chocolate.png", cardBg: "rgba(232,208,184,0.5)", specsBg: "rgba(232,208,184,0.9)", specs: [{ label: "Proteína", value: "27g" }, { label: "Peso", value: "600g" }], price: "$49.90" },
     ],
   },
   {
@@ -37,9 +35,9 @@ const categories: { name: string; desc: string; products: Product[] }[] = [
     name: "Gel Energético",
     desc: "De Guayusa",
     products: [
-      { name: "Mango",   image: "/images/prod-gel-mango.jpg",   cardBg: "rgba(253,232,192,0.5)", specsBg: "rgba(253,232,192,0.9)", specs: [{ label: "Carbos", value: "27g" }, { label: "Cafeína", value: "100mg" }], price: "$3.90" },
+      { name: "Mango",   image: "/images/prod-gel-mango.png",   cardBg: "rgba(253,232,192,0.5)", specsBg: "rgba(253,232,192,0.9)", specs: [{ label: "Carbos", value: "27g" }, { label: "Cafeína", value: "100mg" }], price: "$3.90" },
       { name: "Sandía",  image: "/images/prod-gel-sandia.png",  cardBg: "rgba(255,213,216,0.5)", specsBg: "rgba(255,213,216,0.9)", specs: [{ label: "Carbos", value: "27g" }, { label: "Cafeína", value: "100mg" }], price: "$3.90" },
-      { name: "Neutral", image: "/images/prod-gel-neutral.jpg", cardBg: "rgba(232,232,228,0.5)", specsBg: "rgba(232,232,228,0.9)", specs: [{ label: "Carbos", value: "27g" }, { label: "Cafeína", value: "100mg" }], price: "$3.90" },
+      { name: "Neutral", image: "/images/prod-gel-neutral.png", cardBg: "rgba(232,232,228,0.5)", specsBg: "rgba(232,232,228,0.9)", specs: [{ label: "Carbos", value: "27g" }, { label: "Cafeína", value: "100mg" }], price: "$3.90" },
     ],
   },
   {
