@@ -16,10 +16,10 @@ type NavItem = {
 
 const navItems: NavItem[] = [
   { label: "Home",       href: "/",            icon: <IoHomeOutline />,       from: "#6B3A2A", to: "#C07B3E" },
+  { label: "Categorías", href: "/categorias",  icon: <IoGridOutline />,  from: "#f7971e", to: "#ffd200" },
   { label: "Productos",  href: "/productos",   icon: <IoStorefrontOutline />, from: "#56CCF2", to: "#2F80ED" },
   { label: "Beneficios", href: "/comparativa", icon: <IoLeafOutline />,       from: "#80FF72", to: "#7EE8FA" },
   { label: "Blog",        href: "/blogs",       icon: <IoBookOutline />,  from: "#FF9966", to: "#FF5E62" },
-  { label: "Categorías", href: "/categorias",  icon: <IoGridOutline />,  from: "#f7971e", to: "#ffd200" },
 ];
 
 function GradientNavLink({ item, active }: { item: NavItem; active: boolean }) {

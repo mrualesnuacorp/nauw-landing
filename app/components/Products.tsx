@@ -57,7 +57,7 @@ function CategorySlider({ cat }: { cat: typeof categories[number] }) {
   return (
     <div className="flex flex-col">
       {/* Category label + specs */}
-      <div className="mb-4 text-center flex flex-col gap-3">
+      <div className="mb-2 text-center flex flex-col gap-3">
         <div>
           <h3 className="text-xl font-bold text-white">{cat.name}</h3>
           <p className="text-sm text-white/60">{cat.desc}</p>
@@ -74,14 +74,14 @@ function CategorySlider({ cat }: { cat: typeof categories[number] }) {
 
       {/* Image card */}
       <div className="rounded-3xl overflow-hidden">
-        <div className="relative h-[420px] sm:h-[500px]">
+        <div className="relative h-[1260px] sm:h-[1500px]">
           <Image
             src={product.image}
             alt={`nauw. ${cat.name} ${product.name}`}
             fill
             unoptimized
-            className="object-cover object-center transition-opacity duration-300"
-            sizes="(max-width: 640px) 100vw, 50vw"
+            className="object-contain object-bottom transition-opacity duration-300"
+            sizes="100vw"
           />
 
           {total > 1 && (
@@ -118,7 +118,7 @@ function CategorySlider({ cat }: { cat: typeof categories[number] }) {
       </div>
 
       {/* Info — sabor y precio */}
-      <div className="pt-4 flex flex-col items-center gap-1">
+      <div className="pt-1 flex flex-col items-center gap-1">
         <h4 className="text-lg font-semibold text-white">{product.name}</h4>
         <span className="text-xl font-bold text-white">{product.price}</span>
       </div>
@@ -151,7 +151,7 @@ export default function Products() {
         </ScrollReveal>
 
         {/* Proteína + Electrolitos */}
-        <div className="grid sm:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 gap-8">
           {categories.slice(0, 2).map((cat, i) => (
             <ScrollReveal key={cat.name} direction="up" delay={i * 130}>
               <CategorySlider cat={cat} />
@@ -167,7 +167,7 @@ export default function Products() {
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Gel + Creatina */}
-        <div className="grid sm:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 gap-8">
           {categories.slice(2).map((cat, i) => (
             <ScrollReveal key={cat.name} direction="up" delay={i * 130}>
               <CategorySlider cat={cat} />
