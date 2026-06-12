@@ -21,7 +21,7 @@ const rows = [
 const hydrationRows = [
   { label: "Vitamina B1 (Tiamina)",             nauw: true,  resto: false, highlight: true  },
   { label: "Vitamina B6 (Piridoxina)",           nauw: true,  resto: false, highlight: true  },
-  { label: "Vitamina B12 (Cobalamina)",          nauw: true,  resto: false, highlight: true  },
+  { label: "Vitamina B2 (Riboflavina)",           nauw: true,  resto: false, highlight: true  },
   { label: "Elaborado con polvo de fruta real",  nauw: true,  resto: false, highlight: false },
   { label: "Sin colorantes artificiales",        nauw: true,  resto: false, highlight: false },
   { label: "Sin saborizantes sintéticos",        nauw: true,  resto: false, highlight: false },
@@ -172,7 +172,7 @@ export default function Benefits() {
             <div>
               <p className="text-white text-sm font-semibold mb-1">¿Por qué polvo de fruta?</p>
               <p className="text-white/60 text-sm leading-relaxed">
-                Las frutas naturales contienen vitaminas B1, B6 y B12 de forma biodisponible. Al deshidratarlas conservamos estos micronutrientes sin necesidad de añadir vitaminas sintéticas.
+                Las frutas naturales contienen vitaminas B1, B6 y B2 de forma biodisponible. Al deshidratarlas conservamos estos micronutrientes sin necesidad de añadir vitaminas sintéticas.
               </p>
             </div>
           </div>
