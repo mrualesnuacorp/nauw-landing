@@ -14,7 +14,7 @@ export default function CategoriasPage() {
       <main className="pt-24">
         <CategoryBar />
       </main>
-      <Footer />
+      <Footer minimal />
     </>
   );
 }

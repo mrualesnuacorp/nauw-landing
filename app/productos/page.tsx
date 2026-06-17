@@ -16,7 +16,7 @@ export default function ProductosPage() {
         <Products />
         <Testimonials />
       </main>
-      <Footer />
+      <Footer minimal />
     </>
   );
 }

@@ -74,7 +74,7 @@ function CategorySlider({ cat }: { cat: typeof categories[number] }) {
 
       {/* Image card */}
       <div className="rounded-3xl overflow-hidden">
-        <div className="relative h-[1260px] sm:h-[1500px]">
+        <div className="relative h-[360px] sm:h-[440px]">
           <Image
             src={product.image}
             alt={`nauw. ${cat.name} ${product.name}`}

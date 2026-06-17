@@ -14,7 +14,7 @@ export default function BlogsPage() {
       <main className="pt-24">
         <CTA />
       </main>
-      <Footer />
+      <Footer minimal />
     </>
   );
 }

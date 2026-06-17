@@ -16,7 +16,7 @@ export default function ComparativaPage() {
         <BenefitsInfo />
         <BenefitsTables />
       </main>
-      <Footer />
+      <Footer minimal />
     </>
   );
 }
