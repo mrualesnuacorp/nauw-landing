@@ -7,6 +7,7 @@ import Link from "next/link";
 const categories = [
   {
     name: "Energía",
+    tagline: "Energía que se siente. Rendimiento que perdura.",
     bullets: ["Carbohidratos de rápida absorción", "Cafeína natural de guayusa", "Alto contenido en proteína"],
     products: [
       { name: "Gel Mango", image: "/images/prod-gel-mango.png",          href: "/productos#gel-energetico", bullets: ["Carbohidratos de rápida absorción", "Cafeína natural de guayusa"] },
@@ -15,6 +16,7 @@ const categories = [
   },
   {
     name: "Concentración",
+    tagline: "Claridad mental para rendir al máximo.",
     bullets: ["Enfoque mental", "Sin crash posterior", "Creatina monohidratada pura"],
     products: [
       { name: "Creatina",   image: "/images/prod-creatina.png",   href: "/productos#creatina",       bullets: ["Creatina monohidratada pura", "Claridad mental"] },
@@ -23,6 +25,7 @@ const categories = [
   },
   {
     name: "Vitalidad",
+    tagline: "Nutrición diaria para una vida en equilibrio.",
     bullets: ["Proteína completa de chocho", "9 aminoácidos esenciales", "Hidratación inteligente"],
     products: [
       { name: "Electrolito Coco", image: "/images/prod-electrolito-coco.png",  href: "/productos#electrolitos", bullets: ["Hidratación inteligente", "Minerales esenciales"] },
@@ -45,10 +48,16 @@ export default function CategoryBar() {
             className={`flex-1 py-6 px-4 text-left transition-colors duration-200 cursor-pointer
               ${active === cat.name ? "bg-[#1a3d28]" : "hover:bg-[#1a3d28] group"}`}
           >
-            <p className={`text-sm font-bold uppercase tracking-widest mb-3 transition-colors duration-200
+            <p className={`text-sm font-bold uppercase tracking-widest mb-1 transition-colors duration-200
               ${active === cat.name ? "text-white" : "text-white/70 group-hover:text-white"}`}>
               {cat.name}
             </p>
+            {cat.tagline && (
+              <p className={`text-xs italic mb-3 transition-colors duration-200
+                ${active === cat.name ? "text-white/60" : "text-white/35 group-hover:text-white/60"}`}>
+                {cat.tagline}
+              </p>
+            )}
             <ul className="flex flex-col gap-1">
               {cat.bullets.map((b) => (
                 <li key={b} className={`flex items-start gap-1.5 text-xs transition-colors duration-200
