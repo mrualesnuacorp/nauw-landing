@@ -14,37 +14,40 @@ type Product = {
   price: string;
 };
 
-const categories: { name: string; desc: string; products: Product[] }[] = [
+const categories: { id: string; name: string; desc: string; description?: string; products: Product[] }[] = [
   {
+    id: "proteina",
     name: "Proteína",
     desc: "De chocho con antioxidantes",
+    description: "Proteína de chocho, cacao y uvilla. Una bebida completa, práctica y funcional.",
     products: [
-      { name: "Chocolate y Uvilla", image: "/images/prod-proteina-chocolate.png", cardBg: "rgba(232,208,184,0.5)", specsBg: "rgba(232,208,184,0.9)", specs: [{ label: "Proteína", value: "27g" }, { label: "Peso", value: "600g" }], price: "$49.90" },
+      { name: "Chocolate y Uvilla", image: "/images/prod-proteina-chocolate.png", cardBg: "rgba(232,208,184,0.5)", specsBg: "rgba(232,208,184,0.9)", specs: [{ label: "Proteína", value: "27g" }, { label: "Peso", value: "600g" }], price: "$49.99" },
     ],
   },
   {
+    id: "electrolitos",
     name: "Electrolitos",
     desc: "Electrolitos y vitaminas",
     products: [
-      { name: "Coco",      image: "/images/prod-electrolito-coco.png",      cardBg: "rgba(237,217,192,0.5)", specsBg: "rgba(237,217,192,0.9)", specs: [{ label: "Peso", value: "10g" }, { label: "Sabor", value: "Coco", hideAbove: true }],      price: "$4.90" },
-      { name: "Frutilla",  image: "/images/prod-electrolito-frutilla.png",  cardBg: "rgba(255,213,216,0.5)", specsBg: "rgba(255,213,216,0.9)", specs: [{ label: "Peso", value: "10g" }, { label: "Sabor", value: "Frutilla", hideAbove: true }], price: "$4.90" },
-      { name: "Mandarina", image: "/images/prod-electrolito-mandarina.png", cardBg: "rgba(255,232,192,0.5)", specsBg: "rgba(255,232,192,0.9)", specs: [{ label: "Peso", value: "10g" }, { label: "Sabor", value: "Mandarina", hideAbove: true }], price: "$4.90" },
+      { name: "Coco", image: "/images/prod-electrolito-coco.png", cardBg: "rgba(237,217,192,0.5)", specsBg: "rgba(237,217,192,0.9)", specs: [{ label: "Peso", value: "10g" }, { label: "Sabor", value: "Coco", hideAbove: true }], price: "$48.00" },
     ],
   },
   {
+    id: "gel-energetico",
     name: "Gel Energético",
     desc: "De Guayusa",
     products: [
-      { name: "Mango",   image: "/images/prod-gel-mango.png",   cardBg: "rgba(253,232,192,0.5)", specsBg: "rgba(253,232,192,0.9)", specs: [{ label: "Carbos", value: "27g" }, { label: "Cafeína", value: "100mg" }], price: "$3.90" },
-      { name: "Sandía",  image: "/images/prod-gel-sandia.png",  cardBg: "rgba(255,213,216,0.5)", specsBg: "rgba(255,213,216,0.9)", specs: [{ label: "Carbos", value: "27g" }, { label: "Cafeína", value: "100mg" }], price: "$3.90" },
-      { name: "Neutral", image: "/images/prod-gel-neutral.png", cardBg: "rgba(232,232,228,0.5)", specsBg: "rgba(232,232,228,0.9)", specs: [{ label: "Carbos", value: "27g" }, { label: "Cafeína", value: "100mg" }], price: "$3.90" },
+      { name: "Mango",   image: "/images/prod-gel-mango.png",   cardBg: "rgba(253,232,192,0.5)", specsBg: "rgba(253,232,192,0.9)", specs: [{ label: "Carbos", value: "27g" }, { label: "Cafeína", value: "100mg" }], price: "$60.00" },
+      { name: "Sandía",  image: "/images/prod-gel-sandia.png",  cardBg: "rgba(255,213,216,0.5)", specsBg: "rgba(255,213,216,0.9)", specs: [{ label: "Carbos", value: "27g" }, { label: "Cafeína", value: "100mg" }], price: "$60.00" },
+      { name: "Neutral", image: "/images/prod-gel-neutral.png", cardBg: "rgba(232,232,228,0.5)", specsBg: "rgba(232,232,228,0.9)", specs: [{ label: "Carbos", value: "27g" }, { label: "Cafeína", value: "100mg" }], price: "$60.00" },
     ],
   },
   {
+    id: "creatina",
     name: "Creatina",
     desc: "Monohidratada",
     products: [
-      { name: "Neutral", image: "/images/prod-creatina.png", cardBg: "rgba(221,213,245,0.5)", specsBg: "rgba(221,213,245,0.9)", specs: [{ label: "Peso", value: "5g" }, { label: "Tipo", value: "Monohidratada", hideAbove: true }], price: "$3.90" },
+      { name: "Neutral", image: "/images/prod-creatina.png", cardBg: "rgba(221,213,245,0.5)", specsBg: "rgba(221,213,245,0.9)", specs: [{ label: "Peso", value: "5g" }, { label: "Tipo", value: "Monohidratada", hideAbove: true }], price: "$45.00" },
     ],
   },
 ];
@@ -55,33 +58,18 @@ function CategorySlider({ cat }: { cat: typeof categories[number] }) {
   const total = cat.products.length;
 
   return (
-    <div className="flex flex-col">
-      {/* Category label + specs */}
-      <div className="mb-2 text-center flex flex-col gap-3">
-        <div>
-          <h3 className="text-xl font-bold text-white">{cat.name}</h3>
-          <p className="text-sm text-white/60">{cat.desc}</p>
-        </div>
-        <div className="flex justify-center gap-8">
-          {product.specs.filter((s) => !s.hideAbove).map((s) => (
-            <div key={s.label} className="flex flex-col items-center gap-0.5">
-              <span className="text-lg font-bold text-white leading-none">{s.value}</span>
-              <span className="text-[10px] uppercase tracking-widest text-white/50">{s.label}</span>
-            </div>
-          ))}
-        </div>
-      </div>
+    <div className="flex flex-col sm:flex-row gap-6 items-center">
 
-      {/* Image card */}
-      <div className="rounded-3xl overflow-hidden">
-        <div className="relative h-[360px] sm:h-[440px]">
+      {/* Image card — izquierda */}
+      <div className="w-full sm:w-1/2 rounded-3xl overflow-hidden flex-shrink-0">
+        <div className="relative h-[432px] sm:h-[528px]">
           <Image
             src={product.image}
             alt={`nauw. ${cat.name} ${product.name}`}
             fill
             unoptimized
             className="object-contain object-bottom transition-opacity duration-300"
-            sizes="100vw"
+            sizes="(min-width: 640px) 50vw, 100vw"
           />
 
           {total > 1 && (
@@ -117,11 +105,29 @@ function CategorySlider({ cat }: { cat: typeof categories[number] }) {
         </div>
       </div>
 
-      {/* Info — sabor y precio */}
-      <div className="pt-1 flex flex-col items-center gap-1">
-        <h4 className="text-lg font-semibold text-white">{product.name}</h4>
-        <span className="text-xl font-bold text-white">{product.price}</span>
+      {/* Info — derecha */}
+      <div className="w-full sm:w-1/2 flex flex-col gap-4">
+        <div>
+          <h3 className="text-2xl font-bold text-white">{cat.name}</h3>
+          <p className="text-sm text-white/60 mt-1">{cat.desc}</p>
+          {cat.description && (
+            <p className="text-base text-white/80 mt-3 leading-relaxed">{cat.description}</p>
+          )}
+        </div>
+        <div className="flex gap-8">
+          {product.specs.filter((s) => !s.hideAbove).map((s) => (
+            <div key={s.label} className="flex flex-col gap-0.5">
+              <span className="text-2xl font-bold text-white leading-none">{s.value}</span>
+              <span className="text-[10px] uppercase tracking-widest text-white/50">{s.label}</span>
+            </div>
+          ))}
+        </div>
+        <div>
+          <h4 className="text-lg font-semibold text-white">{product.name}</h4>
+          <span className="text-2xl font-bold text-white">{product.price}</span>
+        </div>
       </div>
+
     </div>
   );
 }
@@ -153,9 +159,11 @@ export default function Products() {
         {/* Proteína + Electrolitos */}
         <div className="grid grid-cols-1 gap-8">
           {categories.slice(0, 2).map((cat, i) => (
-            <ScrollReveal key={cat.name} direction="up" delay={i * 130}>
-              <CategorySlider cat={cat} />
-            </ScrollReveal>
+            <div key={cat.name} id={cat.id}>
+              <ScrollReveal direction="up" delay={i * 130}>
+                <CategorySlider cat={cat} />
+              </ScrollReveal>
+            </div>
           ))}
         </div>
 
@@ -169,9 +177,11 @@ export default function Products() {
         {/* Gel + Creatina */}
         <div className="grid grid-cols-1 gap-8">
           {categories.slice(2).map((cat, i) => (
-            <ScrollReveal key={cat.name} direction="up" delay={i * 130}>
-              <CategorySlider cat={cat} />
-            </ScrollReveal>
+            <div key={cat.name} id={cat.id}>
+              <ScrollReveal direction="up" delay={i * 130}>
+                <CategorySlider cat={cat} />
+              </ScrollReveal>
+            </div>
           ))}
         </div>
 
