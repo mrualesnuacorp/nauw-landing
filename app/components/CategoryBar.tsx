@@ -58,15 +58,6 @@ export default function CategoryBar() {
                 {cat.tagline}
               </p>
             )}
-            <ul className="flex flex-col gap-1">
-              {cat.bullets.map((b) => (
-                <li key={b} className={`flex items-start gap-1.5 text-xs transition-colors duration-200
-                  ${active === cat.name ? "text-white/70" : "text-white/40 group-hover:text-white/70"}`}>
-                  <span className="mt-1 w-1 h-1 rounded-full bg-current shrink-0" />
-                  {b}
-                </li>
-              ))}
-            </ul>
           </button>
         ))}
       </div>
