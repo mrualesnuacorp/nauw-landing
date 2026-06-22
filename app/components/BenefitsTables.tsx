@@ -12,12 +12,15 @@ const rows = [
 
 const hydrationRows = [
   { label: "Vitamina B1 (Tiamina)",            nauw: true,  resto: false, highlight: true  },
-  { label: "Vitamina B6 (Piridoxina)",          nauw: true,  resto: false, highlight: true  },
   { label: "Vitamina B2 (Riboflavina)",         nauw: true,  resto: false, highlight: true  },
+  { label: "Vitamina B6 (Piridoxina)",          nauw: true,  resto: false, highlight: true  },
   { label: "Elaborado con polvo de fruta real", nauw: true,  resto: false, highlight: false },
   { label: "Sin colorantes artificiales",       nauw: true,  resto: false, highlight: false },
-  { label: "Sin saborizantes sintéticos",       nauw: true,  resto: false, highlight: false },
-  { label: "Electrolitos completos (Na·K·Mg)",  nauw: true,  resto: true,  highlight: false },
+
+  { label: "Sodio",                              nauw: true,  resto: true,  highlight: false },
+  { label: "Potasio",                            nauw: true,  resto: true,  highlight: false },
+  { label: "Magnesio",                           nauw: true,  resto: false, highlight: false },
+  { label: "Cafeína natural de guayusa",         nauw: true,  resto: false, highlight: true  },
 ];
 
 const Check = () => (
@@ -42,7 +45,7 @@ export default function BenefitsTables() {
         <ScrollReveal direction="up" delay={100}>
           <div>
             <p className="text-xs font-medium text-[#b07a45] uppercase tracking-widest mb-6">
-              Comparativa
+              Proteína
             </p>
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8">
               Chocho vs. el resto
@@ -83,40 +86,23 @@ export default function BenefitsTables() {
               </table>
             </div>
 
-            <p className="text-xs text-white/40 mt-4">
-              * Comparativa basada en fuentes enteras sin aislamiento. El chocho de nauw. es cultivado en Ecuador.
-            </p>
+
           </div>
         </ScrollReveal>
 
         <ScrollReveal direction="emerge" threshold={0.08}>
           <div className="mt-24">
             <p className="text-xs font-medium text-[#b07a45] uppercase tracking-widest mb-6">
-              Hidratación &amp; Energía
+              Geles &amp; Electrolitos
             </p>
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3">
               nauw. vs. el resto
             </h3>
             <p className="text-white/60 mb-10 max-w-xl leading-relaxed">
-              Nuestros geles y electrolitos están elaborados con <span className="text-white font-medium">polvo de fruta real</span>, lo que aporta de forma natural vitaminas del complejo B que ningún competidor ofrece.
+              Nuestros productos están elaborados con plantas y frutas exóticas ecuatorianas, lo que aporta de forma natural vitaminas, minerales, antioxidantes y nutrientes que ningún competidor ofrece.
             </p>
 
-            <div className="flex items-start gap-4 bg-[#1e3d28] border border-[#b07a45]/30 rounded-2xl p-5 mb-10 max-w-xl">
-              <div className="w-10 h-10 rounded-full bg-[#b07a45]/20 flex items-center justify-center shrink-0 mt-0.5">
-                <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
-                  <path d="M10 2C6 2 3 5.5 3 9c0 3 1.5 5.5 4 7h6c2.5-1.5 4-4 4-7 0-3.5-3-7-7-7z" stroke="#b07a45" strokeWidth="1.4" strokeLinejoin="round"/>
-                  <path d="M10 2c0 4-2 6-2 9" stroke="#b07a45" strokeWidth="1.4" strokeLinecap="round"/>
-                </svg>
-              </div>
-              <div>
-                <p className="text-white text-sm font-semibold mb-1">¿Por qué polvo de fruta?</p>
-                <p className="text-white/60 text-sm leading-relaxed">
-                  Las frutas naturales contienen vitaminas B1, B6 y B2 de forma biodisponible. Al deshidratarlas conservamos estos micronutrientes sin necesidad de añadir vitaminas sintéticas.
-                </p>
-              </div>
-            </div>
-
-            <div className="overflow-x-auto">
+<div className="overflow-x-auto">
               <table className="w-full min-w-[480px]">
                 <thead>
                   <tr>
@@ -150,9 +136,7 @@ export default function BenefitsTables() {
               </table>
             </div>
 
-            <p className="text-xs text-white/40 mt-4">
-              * Comparativa frente a geles y electrolitos deportivos convencionales disponibles en el mercado local.
-            </p>
+
           </div>
         </ScrollReveal>
 

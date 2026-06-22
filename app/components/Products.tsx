@@ -19,7 +19,7 @@ const categories: { id: string; name: string; desc: string; description?: string
     id: "proteina",
     name: "Proteína",
     desc: "De chocho con antioxidantes",
-    description: "Proteína de chocho, cacao y uvilla. Una bebida completa, práctica y funcional.",
+    description: "",
     products: [
       { name: "Chocolate y Uvilla", image: "/images/prod-proteina-chocolate.png", cardBg: "rgba(232,208,184,0.5)", specsBg: "rgba(232,208,184,0.9)", specs: [{ label: "Proteína", value: "27g" }, { label: "Peso", value: "600g" }], price: "$49.99" },
     ],
